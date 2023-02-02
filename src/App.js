@@ -1,15 +1,10 @@
 //you no longer have to import react on all components, only on the index.js file
 import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  NavLink,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 //to use the browser router, we need to wrap everything in <Router></Router>
 //see "return" below
-import Card from "./components/shared/Card";
+import Post from "./components/Post";
 import Header from "./components/Header";
 import FeedbackList from "./components/FeedbackList";
 import FeedbackData from "./data/FeedbackData";
@@ -52,15 +47,9 @@ function App() {
             }
           ></Route>
 
-          <Route exact path='/about' element={<AboutPage />} />
-
-      </Routes>
-
-        <Card>
-          <NavLink to='/' activeClassName='active'>
-            Home
-          </NavLink>
-        </Card>
+          <Route path='/about' element={<AboutPage />} />
+          <Route path='/post' element={<Post />} />
+        </Routes>
 
         <AboutIconLink />
       </div>
