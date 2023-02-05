@@ -27,27 +27,27 @@ export const FeedbackProvider = ({ children }) => {
     edit: false, //if we are not editing it will always be false, if we are editing it will be true via the editFeedback function below
   });
 
-  //Add feedback
+  // Add feedback
   const addFeedback = (newFeedback) => {
     newFeedback.id = uuidv4();
     setFeedback([newFeedback, feedback]);
   };
 
-  //Delete feedback
+  // Delete feedback
   const deleteFeedback = (id) => {
     if (window.confirm("Are you sure you want to delete?")) {
       setFeedback(feedback.filter((item) => item.id !== id));
     }
   };
 
-  //Update feedback item
+  // Update feedback item
   const updateFeedback = (id, updItem) => {
     setFeedback(
       feedback.map((item) => (item.id === id ? { ...item, ...updItem } : item))
     )
   };
 
-  //Set item to be updated
+  // Set item to be updated
   const editFeedback = (item) => {
     setFeedbackEdit({
       item,
