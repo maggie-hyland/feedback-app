@@ -42,7 +42,6 @@ function FeedbackForm() {
         rating,
       };
       addFeedback(newFeedback);
-
       setText("");
     }
   };
