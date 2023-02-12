@@ -1,4 +1,7 @@
 import { createContext, useState, useEffect } from "react";
+//createContext: hook that lets you create a context that components can provide or read
+//useState: hook that lets you add a state variable to your component
+//useEffect: hook that lets you synchronize a component with an external system
 
 const FeedbackContext = createContext();
 
