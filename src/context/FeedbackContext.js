@@ -33,7 +33,7 @@ export const FeedbackProvider = ({ children }) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(newFeedback),
+      body: JSON.stringify(newFeedback)
     });
 
     const data = await response.json();
@@ -63,7 +63,7 @@ export const FeedbackProvider = ({ children }) => {
     const data = await response.json();
 
     // NOTE: no need to spread data and item
-    setFeedback(feedback.map((item) => (item.id === id ? data : item)));
+    setFeedback(feedback.map((item) => (item.id === id ? data : item)))
 
     // FIX: this fixes being able to add a feedback after editing
     setFeedbackEdit({

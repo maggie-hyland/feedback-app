@@ -1,3 +1,5 @@
+ // * npm run dev *   (to run the development server)**************
+
 //you no longer have to import react on all components, only on the index.js file
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 //to use the browser router, we need to wrap everything in <Router></Router>
